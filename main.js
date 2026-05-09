@@ -210,6 +210,28 @@ function initReveal() {
     els.forEach(el => obs.observe(el));
 }
 
+// ── Page transitions (fade out → navigate → fade in) ─────
+function initPageTransitions() {
+    document.body.style.transition = 'opacity 0.35s ease';
+
+    // Fade in on load
+    document.body.style.opacity = '0';
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+        document.body.style.opacity = '1';
+    }));
+
+    // Fade out before navigating to another page
+    document.querySelectorAll('a[href]').forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto')) return;
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            document.body.style.opacity = '0';
+            setTimeout(() => { window.location.href = href; }, 360);
+        });
+    });
+}
+
 // ── Smooth scroll with navbar offset ─────────────────────
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(link => {
@@ -258,4 +280,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initReveal();
     initActiveNav();
     initSmoothScroll();
+    initPageTransitions();
 });
