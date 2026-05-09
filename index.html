@@ -3,76 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jesus Sugar - Frontend Web Developer Portfolio">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Style.css">
-    <title>My resume</title>
+    <title>Jesus Sugar - Portfolio</title>
 </head>
 <body>
-    
-    <nav class="navbar-section">
-        <div><a href="#">Home</a></div>
-        <div><a href="#">Projects</a></div>
-        <div><a href="#">Contact</a></div>
-        <div><a href="#">About me</a></div>
-    </nav>
 
+    <header>
+        <nav class="top-nav">
+            <div class="nav-wrapper container">
+                <a href="#hero" class="brand-logo">JS</a>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger right">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#hero"           data-i18n="nav.home">Home</a></li>
+                    <li><a href="#technologies"   data-i18n="nav.skills">Skills</a></li>
+                    <li><a href="experience.html" data-i18n="nav.experience">Experience</a></li>
+                    <li><a href="#projects"       data-i18n="nav.projects">Projects</a></li>
+                    <li><a href="#contact"        data-i18n="nav.contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <ul class="sidenav" id="mobile-nav">
+            <li><a href="#hero"           data-i18n="nav.home">Home</a></li>
+            <li><a href="#technologies"   data-i18n="nav.skills">Skills</a></li>
+            <li><a href="experience.html" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="#projects"       data-i18n="nav.projects">Projects</a></li>
+            <li><a href="#contact"        data-i18n="nav.contact">Contact</a></li>
+        </ul>
+    </header>
 
-    
-    
-    <article class="quick-section">
-        <img src="./Picture/Photo.jpg" alt="My photo">
-        
-        <div class="quick-text">
-            <h1>Hi Im Jesus Sugar<br><span>Junior Web Developer</span></h1>
-        
-            <p> 
-                Welcome to my portfolio! Here you can discover my web development projects and learn more about my background. 
-                I began studying web development because I like to see my creations and quickly developed a passion for building creative and functional websites. 
-                I enjoy turning ideas into reality through code and am always eager to expand my skills as a developer.
-            </p>
+    <main>
+
+        <!-- Hero -->
+        <section id="hero" class="hero-section">
+            <div class="row valign-wrapper hero-row no-margin">
+
+                <div class="col s12 m7 hero-text-col">
+                    <span class="hero-tag" data-i18n="hero.tag">Frontend Web Developer</span>
+                    <h1 class="hero-title">
+                        <span data-i18n="hero.greeting">Hi, I'm</span><br>
+                        <span class="hero-name">Jesus Sugar</span>
+                    </h1>
+                    <p class="hero-description" data-i18n="hero.desc">
+                        Welcome to my portfolio! I'm a web developer passionate about building scalable,
+                        modern, and high-performance digital experiences. I enjoy turning complex ideas
+                        into clean, intuitive, and impactful products through thoughtful design and development.
+                    </p>
+                    <a href="#projects" class="btn btn-large blue darken-2 waves-effect waves-light hero-btn">
+                        <span data-i18n="hero.btn">View Projects</span>
+                        <i class="material-icons right">arrow_forward</i>
+                    </a>
+                </div>
+
+                <div class="col s12 m5 center-align hero-photo-col">
+                    <div class="photo-ring">
+                        <img src="./Picture/My image.jpg" alt="Jesus Sugar" class="profile-photo circle">
+                        <div class="floating-chip fc-1"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React"> React</div>
+                        <div class="floating-chip fc-2"><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TypeScript"> TypeScript</div>
+                        <div class="floating-chip fc-3"><img src="https://cdn.simpleicons.org/nodedotjs/5FA04E" alt="Node.js"> Node.js</div>
+                        <div class="floating-chip fc-4"><img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="Tailwind"> Tailwind</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="technologies" class="technologies-section">
+            <div class="container">
+                <div class="skills-header">
+                    <h2 class="section-title" data-i18n="skills.title">My Skills</h2>
+                    <p class="section-subtitle" data-i18n="skills.subtitle">Technologies I work with daily</p>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-label" data-i18n="skills.frontend">Front&#8209;end</div>
+                    <div class="skill-chips">
+                        <div class="tech-chip hoverable"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript"><span>JavaScript</span></div>
+                        <div class="tech-chip hoverable"><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TypeScript"><span>TypeScript</span></div>
+                        <div class="tech-chip hoverable"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React"><span>React</span></div>
+                        <div class="tech-chip hoverable"><img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="Tailwind CSS"><span>Tailwind CSS</span></div>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-label" data-i18n="skills.backend">Back&#8209;end</div>
+                    <div class="skill-chips">
+                        <div class="tech-chip hoverable"><img src="https://cdn.simpleicons.org/nodedotjs/5FA04E" alt="Node.js"><span>Node.js</span></div>
+                        <div class="tech-chip hoverable"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python"><span>Python</span></div>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-label" data-i18n="skills.ai">AI Tools</div>
+                    <div class="skill-chips">
+                        <div class="tech-chip hoverable"><img src="https://cdn.simpleicons.org/githubcopilot/1565C0" alt="GitHub Copilot"><span>Copilot</span></div>
+                        <div class="tech-chip hoverable"><img src="https://cdn.simpleicons.org/googlegemini/8E75B2" alt="Gemini"><span>Gemini</span></div>
+                        <div class="tech-chip hoverable"><img src="https://cdn.simpleicons.org/cursor/1565C0" alt="Cursor"><span>Cursor</span></div>
+                    </div>
+                </div>
+                <div class="skill-group no-border">
+                    <div class="skill-label" data-i18n="skills.tools">Tools</div>
+                    <div class="skill-chips">
+                        <div class="tech-chip hoverable"><img src="https://cdn.simpleicons.org/github/181717" alt="GitHub"><span>GitHub</span></div>
+                        <div class="tech-chip hoverable"><img src="https://cdn.simpleicons.org/gitlab/FC6D26" alt="GitLab"><span>GitLab</span></div>
+                        <div class="tech-chip hoverable"><img src="https://cdn.simpleicons.org/dbeaver/1565C0" alt="DBeaver"><span>DBeaver</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="projects-header">
+                    <span class="section-label" data-i18n="projects.label">WORK</span>
+                    <h2 class="section-title" data-i18n="projects.title">My Projects</h2>
+                </div>
+
+                <div class="project-wide-card z-depth-3">
+                    <div class="row no-margin valign-wrapper">
+                        <div class="col s12 m5 no-padding">
+                            <img src="./Picture/HEALTHYY.png" alt="Healthy Food Page" class="project-wide-img">
+                        </div>
+                        <div class="col s12 m7 project-content-col">
+                            <span class="project-number">01</span>
+                            <h3 class="project-title-wide">
+                                <a href="https://healthy-food-pa.vercel.app/" target="_blank" rel="noopener">Healthy Food Page</a>
+                            </h3>
+                            <div class="project-divider"></div>
+                            <p class="project-desc" data-i18n="projects.p1.desc">My first project &mdash; a fully responsive webpage built with HTML and CSS using Grid layout. I chose this topic because I'm passionate about healthy eating and the importance of taking care of our body.</p>
+                            <div class="project-icons">
+                                <img src="./Picture/html5 (1).svg" alt="HTML5" class="project-icon">
+                                <img src="./Picture/css_old (1).svg" alt="CSS3" class="project-icon">
+                            </div>
+                            <a href="https://healthy-food-pa.vercel.app/" target="_blank" rel="noopener" class="btn blue darken-2 waves-effect waves-light project-btn">
+                                <i class="material-icons left">open_in_new</i><span data-i18n="projects.p1.btn">View Live</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-wide-card z-depth-3" style="margin-top:28px;">
+                    <div class="row no-margin valign-wrapper">
+                        <div class="col s12 m5 no-padding">
+                            <div class="project-portfolio-preview">
+                                <div class="preview-navbar"><span class="preview-logo">JS</span><div class="preview-nav-links"><span></span><span></span><span></span></div></div>
+                                <div class="preview-hero"><div class="preview-text-lines"><span class="preview-line preview-line-sm"></span><span class="preview-line preview-line-lg"></span><span class="preview-line preview-line-md"></span><span class="preview-line preview-line-md"></span></div><div class="preview-circle"></div></div>
+                            </div>
+                        </div>
+                        <div class="col s12 m7 project-content-col">
+                            <span class="project-number">02</span>
+                            <h3 class="project-title-wide"><span data-i18n="projects.p2.title">Personal Portfolio</span></h3>
+                            <div class="project-divider"></div>
+                            <p class="project-desc" data-i18n="projects.p2.desc">This portfolio &mdash; designed and built from scratch using HTML, CSS and Materialize CSS following Material Design principles. Features a responsive layout, dynamic skills section, work experience timeline and a dedicated experience page.</p>
+                            <div class="project-icons">
+                                <img src="./Picture/html5 (1).svg" alt="HTML5" class="project-icon">
+                                <img src="./Picture/css_old (1).svg" alt="CSS3" class="project-icon">
+                                <img src="https://cdn.simpleicons.org/materialdesign/757575" alt="Material Design" class="project-icon">
+                            </div>
+                            <a href="#hero" class="btn blue darken-2 waves-effect waves-light project-btn">
+                                <i class="material-icons left">visibility</i><span data-i18n="projects.p2.btn">You're here!</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact" class="page-footer blue darken-3">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6">
+                    <h5 class="white-text footer-name">Jesus Sugar</h5>
+                    <p class="white-text footer-role" data-i18n="footer.role">Frontend Web Developer</p>
+                </div>
+                <div class="col s12 m6 right-align-on-desktop">
+                    <h6 class="white-text" data-i18n="footer.contact">Contact</h6>
+                    <p><a href="mailto:jesussugar27@gmail.com" class="white-text footer-link"><i class="material-icons tiny">email</i> jesussugar27@gmail.com</a></p>
+                </div>
+            </div>
         </div>
-
-    </article>
-
-    <section class="tegnologies-section">
-        
-        <img src="./Picture/html-foto.png" alt="html-foto">
-        
-        <img src="./Picture/CSS-FOTO.png" alt="css-foto">
-
-        <img src="./Picture/javascript.svg" alt="javascript-foto">
-        <div>
-            <img src="./Picture/bootstrap-logo.png" alt="bootstrap-foto">
-            <p class="learn"></p>
+        <div class="footer-copyright blue darken-4">
+            <div class="container white-text">&copy; 2026 Jesus Sugar</div>
         </div>
-    </section>
+    </footer>
 
-     <hr>
-
-    <h1 class="project-title">My Projects</h1>
-
-    
-        
-    <div class="st-project">
-        <a href="https://healthy-food-pa.vercel.app/"><img src="./Picture/HEALTHYY.png" class="stimg" alt="Healthy food page"></a>
-        <div class="st-project-text">
-            <a href="https://healthy-food-pa.vercel.app/"><h2>Healthy food page</h2></a>
-            <p>This is my first project, a simple webpage made with HTML and CSS. 
-                I learned the basics of web development and how to create a responsive 
-                design using Grid. 
-                This was a page that it wanted to create because I like healthy food and I think it is important to take care of our body.
-            </p>
-            <img id="icon" src="./Picture/html5 (1).svg" alt="html5">
-            <img id="icon" src="./Picture/css_old (1).svg" alt="css3">
-        </div>
-    </div>
-
-    
-    
-    
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="main.js"></script>
 </body>
-
 </html>
-
-
-
