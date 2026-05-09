@@ -210,6 +210,24 @@ function initReveal() {
     els.forEach(el => obs.observe(el));
 }
 
+// ── Smooth scroll with navbar offset ─────────────────────
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', e => {
+            const href = link.getAttribute('href');
+            const target = document.querySelector(href);
+            if (!target) return;
+            e.preventDefault();
+            const navH = document.querySelector('.top-nav')?.offsetHeight || 64;
+            const top = target.getBoundingClientRect().top + window.scrollY - navH;
+            window.scrollTo({ top, behavior: 'smooth' });
+            // close sidenav on mobile if open
+            const sidenav = document.querySelector('.sidenav');
+            if (sidenav) M.Sidenav.getInstance(sidenav)?.close();
+        });
+    });
+}
+
 // ── Active nav on scroll ──────────────────────────────────────
 function initActiveNav() {
     const sections = document.querySelectorAll('section[id]');
@@ -239,4 +257,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initTyping();
     initReveal();
     initActiveNav();
+    initSmoothScroll();
 });

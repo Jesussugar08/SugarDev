@@ -8,6 +8,11 @@ html, body {
     width: 100%;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 64px;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f8ff;
